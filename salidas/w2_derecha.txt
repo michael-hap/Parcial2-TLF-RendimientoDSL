@@ -1,0 +1,53 @@
+Ejemplo: Segunda cadena valida - compra
+Derivación: derecha
+
+Aplicando producciones:
+
+Paso 1: S → LISTA_ESCENARIOS
+Paso 2: LISTA_ESCENARIOS → ESCENARIO
+Paso 3: ESCENARIO → escenario NOMBRE { USUARIOS DURACION LISTA_METRICAS }
+Paso 4: LISTA_METRICAS → METRICA LISTA_METRICAS
+Paso 5: LISTA_METRICAS → METRICA
+Paso 6: METRICA → metrica throughput ;
+Paso 7: METRICA → metrica errores ;
+Paso 8: DURACION → duracion NUMERO ;
+Paso 9: NUMERO → 120
+Paso 10: USUARIOS → usuarios NUMERO ;
+Paso 11: NUMERO → 50
+Paso 12: NOMBRE → compra
+
+Cadena generada:
+escenario compra { usuarios 50 ; duracion 120 ; metrica errores ; metrica throughput ; }
+
+Verificación:
+CORRECTO: derivación completa y cadena verificada.
+
+Árbol de derivación:
+S
+    └── LISTA_ESCENARIOS
+        └── ESCENARIO
+            ├── escenario
+            ├── NOMBRE
+            │   └── compra
+            ├── {
+            ├── USUARIOS
+            │   ├── usuarios
+            │   ├── NUMERO
+            │   │   └── 50
+            │   └── ;
+            ├── DURACION
+            │   ├── duracion
+            │   ├── NUMERO
+            │   │   └── 120
+            │   └── ;
+            ├── LISTA_METRICAS
+            │   ├── METRICA
+            │   │   ├── metrica
+            │   │   ├── errores
+            │   │   └── ;
+            │   └── LISTA_METRICAS
+            │       └── METRICA
+            │           ├── metrica
+            │           ├── throughput
+            │           └── ;
+            └── }

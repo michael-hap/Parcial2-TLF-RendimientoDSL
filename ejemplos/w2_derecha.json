@@ -1,0 +1,34 @@
+{
+  "nombre": "Segunda cadena valida - compra",
+  "direccion": "derecha",
+  "pasos": [
+    ["LISTA_ESCENARIOS"],
+    ["ESCENARIO"],
+    [
+      "escenario",
+      "NOMBRE",
+      "{",
+      "USUARIOS",
+      "DURACION",
+      "LISTA_METRICAS",
+      "}"
+    ],
+    ["METRICA", "LISTA_METRICAS"],
+    ["METRICA"],
+    ["metrica", "throughput", ";"],
+    ["metrica", "errores", ";"],
+    ["duracion", "NUMERO", ";"],
+    ["120"],
+    ["usuarios", "NUMERO", ";"],
+    ["50"],
+    ["compra"]
+  ],
+  "cadena_esperada": [
+    "escenario", "compra", "{",
+    "usuarios", "50", ";",
+    "duracion", "120", ";",
+    "metrica", "errores", ";",
+    "metrica", "throughput", ";",
+    "}"
+  ]
+}

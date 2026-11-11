@@ -1,0 +1,46 @@
+Ejemplo: Primera cadena valida - login
+Derivación: izquierda
+
+Aplicando producciones:
+
+Paso 1: S → LISTA_ESCENARIOS
+Paso 2: LISTA_ESCENARIOS → ESCENARIO
+Paso 3: ESCENARIO → escenario NOMBRE { USUARIOS DURACION LISTA_METRICAS }
+Paso 4: NOMBRE → login
+Paso 5: USUARIOS → usuarios NUMERO ;
+Paso 6: NUMERO → 100
+Paso 7: DURACION → duracion NUMERO ;
+Paso 8: NUMERO → 60
+Paso 9: LISTA_METRICAS → METRICA
+Paso 10: METRICA → metrica latencia ;
+
+Cadena generada:
+escenario login { usuarios 100 ; duracion 60 ; metrica latencia ; }
+
+Verificación:
+CORRECTO: derivación completa y cadena verificada.
+
+Árbol de derivación:
+S
+    └── LISTA_ESCENARIOS
+        └── ESCENARIO
+            ├── escenario
+            ├── NOMBRE
+            │   └── login
+            ├── {
+            ├── USUARIOS
+            │   ├── usuarios
+            │   ├── NUMERO
+            │   │   └── 100
+            │   └── ;
+            ├── DURACION
+            │   ├── duracion
+            │   ├── NUMERO
+            │   │   └── 60
+            │   └── ;
+            ├── LISTA_METRICAS
+            │   └── METRICA
+            │       ├── metrica
+            │       ├── latencia
+            │       └── ;
+            └── }

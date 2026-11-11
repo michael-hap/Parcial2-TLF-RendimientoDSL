@@ -1,0 +1,31 @@
+{
+  "nombre": "Primera cadena valida - login",
+  "direccion": "izquierda",
+  "pasos": [
+    ["LISTA_ESCENARIOS"],
+    ["ESCENARIO"],
+    [
+      "escenario",
+      "NOMBRE",
+      "{",
+      "USUARIOS",
+      "DURACION",
+      "LISTA_METRICAS",
+      "}"
+    ],
+    ["login"],
+    ["usuarios", "NUMERO", ";"],
+    ["100"],
+    ["duracion", "NUMERO", ";"],
+    ["60"],
+    ["METRICA"],
+    ["metrica", "latencia", ";"]
+  ],
+  "cadena_esperada": [
+    "escenario", "login", "{",
+    "usuarios", "100", ";",
+    "duracion", "60", ";",
+    "metrica", "latencia", ";",
+    "}"
+  ]
+}

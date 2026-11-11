@@ -1,0 +1,52 @@
+{
+  "nombre": "RendimientoDSL",
+  "simbolo_inicial": "S",
+  "producciones": {
+    "S": [
+      ["LISTA_ESCENARIOS"]
+    ],
+    "LISTA_ESCENARIOS": [
+      ["ESCENARIO", "LISTA_ESCENARIOS"],
+      ["ESCENARIO"]
+    ],
+    "ESCENARIO": [
+      [
+        "escenario",
+        "NOMBRE",
+        "{",
+        "USUARIOS",
+        "DURACION",
+        "LISTA_METRICAS",
+        "}"
+      ]
+    ],
+    "NOMBRE": [
+      ["login"],
+      ["compra"],
+      ["consulta"]
+    ],
+    "USUARIOS": [
+      ["usuarios", "NUMERO", ";"]
+    ],
+    "DURACION": [
+      ["duracion", "NUMERO", ";"]
+    ],
+    "LISTA_METRICAS": [
+      ["METRICA", "LISTA_METRICAS"],
+      ["METRICA"]
+    ],
+    "METRICA": [
+      ["metrica", "latencia", ";"],
+      ["metrica", "errores", ";"],
+      ["metrica", "throughput", ";"]
+    ],
+    "NUMERO": [
+      ["10"],
+      ["50"],
+      ["60"],
+      ["100"],
+      ["120"],
+      ["200"]
+    ]
+  }
+}

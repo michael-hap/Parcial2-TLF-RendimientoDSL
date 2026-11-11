@@ -1,0 +1,25 @@
+{
+  "nombre": "Prueba de derivacion incompleta",
+  "direccion": "izquierda",
+  "pasos": [
+    ["LISTA_ESCENARIOS"],
+    ["ESCENARIO"],
+    [
+      "escenario",
+      "NOMBRE",
+      "{",
+      "USUARIOS",
+      "DURACION",
+      "LISTA_METRICAS",
+      "}"
+    ],
+    ["login"]
+  ],
+  "cadena_esperada": [
+    "escenario", "login", "{",
+    "usuarios", "100", ";",
+    "duracion", "60", ";",
+    "metrica", "latencia", ";",
+    "}"
+  ]
+}
